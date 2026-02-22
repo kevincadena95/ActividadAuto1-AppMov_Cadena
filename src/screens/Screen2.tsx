@@ -25,7 +25,7 @@ export const Screen2 = () => {
     const [resultado, setResultado] = useState<string>('');
 
     //funcion para realizar el calculo de la division
-    const handleDivide = () => {
+    const handleDividir = () => {
     const { dividendo, divisor } = formLogin;
 
     if (divisor === 0) {
@@ -53,7 +53,7 @@ export const Screen2 = () => {
                 handleChangeValue={handleChangeValue}
                 name='divisor'/>
 
-        <Button title='Dividir' onPress={handleDivide} />
+        <Button title='Dividir' onPress={handleDividir} />
 
         <Text style={[StyleGlobal.text, { marginTop: 12 }]}>Resultado: {resultado}</Text>
         
