@@ -2,14 +2,28 @@ import { StyleSheet } from 'react-native';
 
 
 export const StyleGlobal = StyleSheet.create({
-    text: {
-        color: 'black',
+    textTitle: {
+        color: '#121764',
         fontSize: 25,
-        fontWeight: 'bold',
+        fontWeight: '900',
         marginTop: 90,
-        marginBottom: 30,
+        marginBottom: 45,
         margin: 50,
         textAlign: 'center',
+    },
+
+    text: {
+        color: 'black',
+        fontSize: 22,
+        fontWeight: '600',
+        marginTop: 30,
+        marginBottom: 75,
+        margin: 50,
+        textAlign: 'center',
+        backgroundColor:'#52c3f8',
+        padding: 10,
+        borderRadius: 8
+        
     },
 
     containerBody: {
@@ -29,10 +43,13 @@ export const StyleGlobal = StyleSheet.create({
     button:{
         backgroundColor: 'blue',
         borderRadius: 5,
-        margin: 15,
-        color: 'blue',
+        marginTop: 12,
+        marginBottom: 12,
+        
         
     },
+
+
 
     buttonText:{
         color: 'white',

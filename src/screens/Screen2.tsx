@@ -4,6 +4,7 @@ import { BodyComponent } from '../components/BodyComponent';
 import { StyleGlobal } from '../theme/AppTheme';
 import { InputComponent } from '../components/InputComponent';
 import { ButtonComponent } from '../components/ButtonComponent';
+import { CommonActions, useNavigation } from '@react-navigation/native';
 
 interface FormLogin {
     dividendo: number
@@ -11,6 +12,9 @@ interface FormLogin {
 }
 
 export const Screen2 = () => {
+
+  const navigation = useNavigation();
+
       //hook UseState:m permite gestionar el estado del formulario
     const [formLogin, setFormLogin] = useState<FormLogin>({
         dividendo: 0,
@@ -45,7 +49,7 @@ export const Screen2 = () => {
   return (
     <View> 
       <BodyComponent>
-        <Text style={StyleGlobal.text}> Formulario:</Text> 
+        <Text style={StyleGlobal.textTitle}> FORMULARIO:</Text> 
         <View>
                 <InputComponent placeholder='Dividendo' keyboardType='numeric' 
                 handleChangeValue={handleChangeValue}
@@ -57,7 +61,9 @@ export const Screen2 = () => {
 
         <ButtonComponent buttonText="Dividir" onPress={handleDividir} />
 
-        <Text style={[StyleGlobal.text, { marginTop: 12 }]}>Resultado: {resultado}</Text>
+        <Text style={StyleGlobal.text}>Resultado: {resultado}</Text>
+
+        <ButtonComponent buttonText="Regresar" onPress={()=>navigation.dispatch(CommonActions.navigate({name: 'Pantalla1'}))}/>
         
       </BodyComponent>
     </View>
