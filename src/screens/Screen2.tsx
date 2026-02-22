@@ -3,6 +3,7 @@ import { Button, Text, View } from 'react-native'
 import { BodyComponent } from '../components/BodyComponent';
 import { StyleGlobal } from '../theme/AppTheme';
 import { InputComponent } from '../components/InputComponent';
+import { ButtonComponent } from '../components/ButtonComponent';
 
 interface FormLogin {
     dividendo: number
@@ -52,13 +53,12 @@ export const Screen2 = () => {
                 <InputComponent placeholder='Divisor' keyboardType='numeric'
                 handleChangeValue={handleChangeValue}
                 name='divisor'/>
+        </View>
 
-        <Button title='Dividir' onPress={handleDividir} />
+        <ButtonComponent buttonText="Dividir" onPress={handleDividir} />
 
         <Text style={[StyleGlobal.text, { marginTop: 12 }]}>Resultado: {resultado}</Text>
         
-
-        </View>
       </BodyComponent>
     </View>
   )
