@@ -7,7 +7,9 @@ export const StyleGlobal = StyleSheet.create({
         fontSize: 25,
         fontWeight: 'bold',
         marginTop: 90,
-        marginBottom: 30
+        marginBottom: 30,
+        margin: 50,
+        textAlign: 'center',
     },
 
     containerBody: {
@@ -21,21 +23,21 @@ export const StyleGlobal = StyleSheet.create({
         backgroundColor: '#D3D3D3',
         paddingHorizontal: 20,
         borderRadius: 5,
-        marginVertical: 5,
         marginBottom:30
     },
 
     button:{
-        backgroundColor: 'red',
+        backgroundColor: 'blue',
         borderRadius: 5,
-        marginVertical: 5,
-        color: 'white',
-        textAlign: 'center',
-        fontWeight: 'bold',
+        margin: 15,
+        color: 'blue',
+        
     },
 
     buttonText:{
         color: 'white',
+        fontSize: 20,
+        padding: 10,
         textAlign: 'center',
         borderRadius: 5,
         marginVertical: 5,
